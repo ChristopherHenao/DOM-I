@@ -42,8 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav section
-const header = document.querySelector("header");
-const links = header.querySelectorAll("nav a");
+const nav = document.querySelector("header");
+const links = nav.querySelectorAll("nav a");
 links[0].textContent = "Services";
 links[1].textContent = "Product";
 links[2].textContent = "Vision";
@@ -52,3 +52,49 @@ links[4].textContent = "About";
 links[5].textContent = "Contact";
 
 // CTA section
+const cta = document.querySelector(".cta");
+cta.querySelector("h1").textContent = "DOM Is Awesome";
+cta.querySelector("button").textContent = "Get Started";
+cta.querySelector("#cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Main Content section
+const mainC = document.querySelector(".main-content");
+const topC = mainC.querySelector(".top-content");
+const topCDiv = topC.querySelectorAll("div");
+const bottomC = mainC.querySelector(".bottom-content");
+const bottomCDiv = bottomC.querySelectorAll("div");
+
+    // Top Content
+topCDiv[0].querySelector("h4").textContent = siteContent["main-content"]["features-h4"];
+topCDiv[0].querySelector("p").textContent = siteContent["main-content"]["features-content"];
+
+topCDiv[1].querySelector("h4").textContent = siteContent["main-content"]["about-h4"];;
+topCDiv[1].querySelector("p").textContent = siteContent["main-content"]["about-content"];
+
+    // Middle Image 
+mainC.querySelector("#middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+    // Bottom Content
+bottomCDiv[0].querySelector("h4").textContent = siteContent["main-content"]["services-h4"];
+bottomCDiv[0].querySelector("p").textContent = siteContent["main-content"]["services-content"];
+
+bottomCDiv[1].querySelector("h4").textContent = siteContent["main-content"]["product-h4"];
+bottomCDiv[1].querySelector("p").textContent = siteContent["main-content"]["product-content"];
+
+bottomCDiv[2].querySelector("h4").textContent = siteContent["main-content"]["vision-h4"];
+bottomCDiv[2].querySelector("p").textContent = siteContent["main-content"]["vision-content"];
+
+// Contact Section
+const contact = document.querySelector(".contact");
+const contactPs = contact.querySelectorAll("p");
+
+contact.querySelector("h4").textContent = siteContent["contact"]["contact-h4"];
+contactPs[0].textContent = siteContent["contact"]["address"];
+contactPs[1].textContent = siteContent["contact"]["phone"];
+contactPs[2].textContent = siteContent["contact"]["email"];
+
+// Footer Section
+const footer = document.querySelector("footer");
+
+footer.querySelector("p").textContent = siteContent["footer"]["copyright"];
+
